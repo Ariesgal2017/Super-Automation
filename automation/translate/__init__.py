@@ -1,0 +1,9 @@
+from automation.translate import chinese  # noqa
+from automation.translate import dutch  # noqa
+from automation.translate import french  # noqa
+from automation.translate import italian  # noqa
+from automation.translate import japanese  # noqa
+from automation.translate import korean  # noqa
+from automation.translate import portuguese  # noqa
+from automation.translate import russian  # noqa
+from automation.translate import spanish  # noqa
