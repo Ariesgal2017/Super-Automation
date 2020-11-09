@@ -5,6 +5,8 @@
 
 
 py -m pip install virtualenvwrapper-win --force-reinstall --user
+python setup.py install
+pip install -r requirements.txt
 echo:
 echo:
 echo: *** You may now use virtualenv commands in your command shell. ***
