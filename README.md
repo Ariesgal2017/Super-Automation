@@ -10,15 +10,17 @@
 ```bash
 git clone https://github.com/zahed3795/Super-Automation.git
 cd Super-Automation
+py -m pip --upgrade pip
+pip install -e . --upgrade --no-cache-dir --progress-bar off
 pip install -r requirements.txt
 python setup.py install
-pip install . 
 zahed install chrome -l
-zahed install ff -l
-zahed install opera -l
+zahed install gecko -l
 zahed install edge -l
+zahed install ie -l
+zahed install opera -l
+py -m pip install virtualenvwrapper-win --force-reinstall --user
 pip install -e .  # Editable install
-install.bat
 ```
 
 * Type ``zahed`` to verify that Super-Automation was installed successfully:
