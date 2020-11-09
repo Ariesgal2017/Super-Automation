@@ -1,9 +1,9 @@
 # Super-Automation by Zahed Khan
 
 
-<h2>Need to run installation.bat in CMD or terminal for installation and this step is must: 🚀</h2>
-
-[installation.bat](https://github.com/zahed3795/Super-Automation/blob/master/installation.bat)
+<h2>Need to run win_install.bat and win_virtualenv.bat in CMD or terminal for installation and this step is must: 🚀</h2>
+[win_install.bat](https://github.com/zahed3795/Super-Automation/blob/master/win_install.bat)
+[win_virtualenv.bat](https://github.com/zahed3795/Super-Automation/blob/master/win_virtualenv.bat)
 
 ```bash
 git clone https://github.com/zahed3795/Super-Automation.git
