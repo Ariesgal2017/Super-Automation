@@ -7,7 +7,7 @@
 
 ```bash
 git clone https://github.com/zahed3795/Super-Automation.git
-cd Super-Automation/
+cd Super-Automation
 pip install .  # Normal installation
 pip install -e .  # Editable install
 install.bat
