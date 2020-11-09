@@ -62,8 +62,6 @@ class ManualQA(Base):
         self.__process_manual_check_results(self.auto_close_results_page)
         super(ManualQA, self).tearDown()
 
-    ####################
-
     def __get_timestamp(self):
         return str(int(time.time() * 1000))
 
