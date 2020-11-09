@@ -5,10 +5,6 @@
 
 
 py -m pip install virtualenvwrapper-win --force-reinstall --user
-py -m pip --upgrade pip
-pip install -e . --upgrade --no-cache-dir --progress-bar off
-py -m venv venv
-call venv\\Scripts\\activate
 echo:
 echo:
 echo: *** You may now use virtualenv commands in your command shell. ***
