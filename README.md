@@ -8,7 +8,13 @@
 ```bash
 git clone https://github.com/zahed3795/Super-Automation.git
 cd Super-Automation
-pip install .  # Normal installation
+pip install -r requirements.txt
+python setup.py install
+pip install . 
+zahed install chrome -l
+zahed install ff -l
+zahed install opera -l
+zahed install edge -l
 pip install -e .  # Editable install
 install.bat
 ```
