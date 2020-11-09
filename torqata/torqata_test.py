@@ -23,7 +23,7 @@ class Torqata_Test_Class(Base):
         self.input("//input[@name='username']", '!@#$%^&*()_+-')
         self.clear("//input[@name='username']")
         self.input("//input[@name='username']", '!@#$%^&*()_+-')
-        print("UNIT TEST 00001----Test id 00001")
+        print("\nUNIT TEST 00001----Test id 00001 passed")
 
     # INTEGRATION TEST 00002----Test id 00002
     def test_torqata_00002(self):
@@ -56,7 +56,7 @@ class Torqata_Test_Class(Base):
         self.input("//input[@name='password']", '!@#$%^&*()_+-')
         self.clear("//input[@name='password']")
         self.input("//input[@name='password']", '!@#$%^&*()_+-')
-        print("    # INTEGRATION TEST 00002----Test id 00002")
+        print("\nINTEGRATION TEST 00002----Test id 00002 passed")
 
     # End To End Test ---Test Id 00003
     def test_torqata_00003(self):
@@ -79,7 +79,7 @@ class Torqata_Test_Class(Base):
         Invalid_credentials = self.get_text("//div[contains(text(),'Login Error: Invalid credentials.')]")
         assert "Login Error: Invalid credentials.", Invalid_credentials
         print(Invalid_credentials)
-        print("    # End To End Test ---Test Id 00003")
+        print("\nEnd To End Test ---Test Id 00003 passed")
 
     # End To End Test ---Test Id 00004
     def test_torqata_00004(self):
@@ -108,13 +108,29 @@ class Torqata_Test_Class(Base):
         # User select on 720p
         self.click("//div[@id='ytp-id-17']/div/div[2]/div[2]/div/div")
         self.sleep(4)
-        print("# End To End Test ---Test Id 00004")
+        print("\nEnd To End Test ---Test Id 00004 passed")
 
+    # END TO END TEST 00005----Test id 00005
     def test_torqata_00005(self):
+        # Users Go to https://torqata.com/
         self.open("https://torqata.com/")
-        self.click("Resources")
-        self.click("Blog")
-        self.click("(//a[contains(text(),'Read more')])[3]")
-        self.click("https://talkpython.fm/episodes/show/226/building-flask-apis-for-data-scientists")
-        guest = self.get_text("//div[1][@class='guest-name']")
+        # Users Click the  ‘Resources’ dropdown
+        self.click("//a[contains(text(),'Resources')]")
+        # Users Click on  ‘Blog’ option
+        self.click("//div/a[1][contains(text(),'Blog')]")
+        # Users scroll link into view and click link on  Podcast: Building Flask APIs for data scientists
+        self.scroll_to("//a[contains(text(),'Podcast: Building Flask APIs for data scientists')]")
+        self.click("//a[contains(text(),'Podcast: Building Flask APIs for data scientists')]")
+        # Users verify text ‘By Author: Michael Kennedy’ visible
+        self.assert_element_present("//span[contains(text(),'Michael Kennedy')]")
+        # Users verifies text “Featuring: AJ Pryor” is present
+        self.assert_element_present("//a[contains(text(),'AJ Pryor')]")
+        # Users click on link podcast link
+        self.click("//a[contains(text(),'https://talkpython.fm/episodes/show/226/building-flask-apis-for-data"
+                   "-scientists')]")
+        self.switch_to_window(1)
+        # Users Verify the name AJ Pryor in podcast site
+        self.assert_element_present("//div[1][contains(text(),'AJ Pryor')]")
+        guest = self.get_text("//div[1][contains(text(),'AJ Pryor')]")
         assert guest == 'AJ Pryor'
+        print("\nEND TO END TEST 00005----Test id 00005 passed")
