@@ -58,7 +58,7 @@ setup(
         "Topic :: Software Development :: Testing :: End to End",
         "Topic :: Utilities",
     ],
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
+    python_requires='>=2.7, !=3.5.*, !=3.6.*, !=3.7.*, !=3.8.*, !=3.9.*',
     install_requires=[
         'pip>=20.2.4',
         'packaging>=20.4',
