@@ -62,11 +62,11 @@ ECI_Exception = selenium_exceptions.ElementClickInterceptedException
 ENI_Exception = selenium_exceptions.ElementNotInteractableException
 
 
-class Base(unittest.TestCase):
+class BaseCase(unittest.TestCase):
     """ <Class automation.BaseCase> """
 
     def __init__(self, *args, **kwargs):
-        super(Base, self).__init__(*args, **kwargs)
+        super(BaseCase, self).__init__(*args, **kwargs)
         self.driver = None
         self.environment = None
         self.env = None  # Add a shortened version of self.environment

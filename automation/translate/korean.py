@@ -1,9 +1,9 @@
 # Korean / 한국어 - Translations - Python 3 Only!
-from automation import Base
+from automation import BaseCase
 from automation import ManualQA
 
 
-class 셀레늄_테스트_케이스(Base):  # noqa
+class 셀레늄_테스트_케이스(BaseCase):  # noqa
 
     def __init__(self, *args, **kwargs):
         super(셀레늄_테스트_케이스, self).__init__(*args, **kwargs)

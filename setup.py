@@ -154,6 +154,7 @@ setup(
         'automation.utilities.selenium_grid',
         'automation.utilities.selenium_ide',
         'automation.virtual_display',
+        'automation.requests',
     ],
     include_package_data=True,
     entry_points={

@@ -1,9 +1,9 @@
 # Portuguese / Português - Translations - Python 3 Only!
-from automation import Base
+from automation import BaseCase
 from automation import ManualQA
 
 
-class CasoDeTeste(Base):
+class CasoDeTeste(BaseCase):
 
     def __init__(self, *args, **kwargs):
         super(CasoDeTeste, self).__init__(*args, **kwargs)

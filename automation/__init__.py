@@ -1,5 +1,5 @@
 from automation.__version__ import __version__  # noqa
-from automation.fixtures.base_case import Base  # noqa
+from automation.fixtures.base_case import BaseCase  # noqa
 from automation.manual_qa.manual_qa import ManualQA  # noqa
 from automation.common import decorators  # noqa
 from automation.common import encryption  # noqa

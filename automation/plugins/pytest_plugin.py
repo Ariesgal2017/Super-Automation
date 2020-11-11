@@ -621,9 +621,9 @@ def sb(request):
     """ Super-Automation as a pytest fixture.
         Usage example: "def test_one(sb):"
         You'll need to use this for tests that use other pytest fixtures. """
-    from automation import Base
+    from automation import BaseCase
 
-    class BaseClass(Base):
+    class BaseClass(BaseCase):
 
         def setUp(self):
             super(BaseClass, self).setUp()

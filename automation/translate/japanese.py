@@ -1,9 +1,9 @@
 # Japanese / 日本語 - Translations - Python 3 Only!
-from automation import Base
+from automation import BaseCase
 from automation import ManualQA
 
 
-class セレニウムテストケース(Base):  # noqa
+class セレニウムテストケース(BaseCase):  # noqa
 
     def __init__(self, *args, **kwargs):
         super(セレニウムテストケース, self).__init__(*args, **kwargs)

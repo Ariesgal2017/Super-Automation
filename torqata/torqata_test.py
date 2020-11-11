@@ -1,7 +1,7 @@
-from automation import Base
+from automation import BaseCase
 
 
-class Torqata_Test_Class(Base):
+class Torqata_Test_Class(BaseCase):
 
     # UNIT TEST 00001----Test id 00001
     def test_torqata_00001(self):

@@ -1,9 +1,9 @@
 # Dutch / Nederlands - Translations
-from automation import Base
+from automation import BaseCase
 from automation import ManualQA
 
 
-class Testgeval(Base):
+class Testgeval(BaseCase):
 
     def __init__(self, *args, **kwargs):
         super(Testgeval, self).__init__(*args, **kwargs)

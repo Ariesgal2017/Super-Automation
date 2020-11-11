@@ -1,9 +1,9 @@
 # Italian / Italiano - Translations - Python 3 Only!
-from automation import Base
+from automation import BaseCase
 from automation import ManualQA
 
 
-class CasoDiProva(Base):
+class CasoDiProva(BaseCase):
 
     def __init__(self, *args, **kwargs):
         super(CasoDiProva, self).__init__(*args, **kwargs)

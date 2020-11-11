@@ -4,7 +4,7 @@ import sys
 import time
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.remote.errorhandler import NoAlertPresentException
-from automation import Base
+from automation import BaseCase
 from automation.core.style_sheet import style
 from automation.config import settings
 from automation.fixtures import js_utils
@@ -12,7 +12,7 @@ from automation.fixtures import js_utils
 # This tool allows testers to quickly verify pages while assisted by automation
 
 
-class ManualQA(Base):
+class ManualQA(BaseCase):
 
     def setUp(self):
         self.check_count = 0

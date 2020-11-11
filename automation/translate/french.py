@@ -1,9 +1,9 @@
 # French / Français - Translations - Python 3 Only!
-from automation import Base
+from automation import BaseCase
 from automation import ManualQA
 
 
-class CasDeBase(Base):
+class CasDeBase(BaseCase):
 
     def __init__(self, *args, **kwargs):
         super(CasDeBase, self).__init__(*args, **kwargs)

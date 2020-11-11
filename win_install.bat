@@ -8,3 +8,4 @@ zahed install gecko -l
 zahed install edge -l
 zahed install ie -l
 zahed install opera -l
+
