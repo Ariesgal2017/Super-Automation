@@ -68,14 +68,14 @@ DEFAULT_MESSAGE_DURATION = 2.55
 
 # If True, the Content Security Policy will be disabled on Firefox.
 # If False, each website's default Content Security Policy will be used.
-# (A website's CSP may prevent SeleniumBase from loading custom JavaScript.)
+# (A website's CSP may prevent Super from loading custom JavaScript.)
 # If using demo_mode or MasterQA, this value will become True regardless.
 # You can also disable the CSP on the command line by using "--disable_csp".
 DISABLE_CSP_ON_FIREFOX = True
 
 # If True, the Content Security Policy will be disabled on Chrome.
 # If False, each website's default Content Security Policy will be used.
-# (A website's CSP may prevent SeleniumBase from loading custom JavaScript.)
+# (A website's CSP may prevent Super from loading custom JavaScript.)
 # You can also disable the CSP on the command line by using "--disable_csp".
 DISABLE_CSP_ON_CHROME = False
 
@@ -143,7 +143,7 @@ S3_SELENIUM_SECRET_KEY = "[S3 SECRET KEY]"
 
 # ENCRYPTION SETTINGS
 # (Used for string/password obfuscation)
-# (You should reset the Encryption Key for every clone of SeleniumBase)
+# (You should reset the Encryption Key for every clone of Super)
 ENCRYPTION_KEY = "Pg^.l!8UdJ+Y7dMIe&fl*%!p9@ej]/#tL~3E4%6?"
 # These tokens are added to the beginning and end of obfuscated passwords.
 # Helps identify which strings/passwords have been obfuscated.
