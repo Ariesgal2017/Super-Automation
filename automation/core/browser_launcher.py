@@ -638,10 +638,10 @@ def get_local_driver(
         disable_gpu, incognito, guest_mode, devtools, swiftshader,
         block_images, user_data_dir, extension_zip, extension_dir,
         mobile_emulator, device_width, device_height, device_pixel_ratio):
-    '''
+    """
     Spins up a new web browser and returns the driver.
     Can also be used to spin up additional browsers for the same test.
-    '''
+    """
     downloads_path = download_helper.get_downloads_folder()
     download_helper.reset_downloads_folder()
 
