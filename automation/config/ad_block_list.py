@@ -1,5 +1,5 @@
 """
-For use with SeleniumBase ad_block functionality.
+For use with Own ad_block functionality.
 
 Usage:
     On the command line:
