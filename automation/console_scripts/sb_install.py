@@ -41,9 +41,9 @@ from automation import drivers  # webdriver storage folder for Automation
 urllib3.disable_warnings()
 DRIVER_DIR = os.path.dirname(os.path.realpath(drivers.__file__))
 LOCAL_PATH = "/usr/local/bin/"  # On Mac and Linux systems
-DEFAULT_CHROMEDRIVER_VERSION = "86.0.4240.183"  # (Specify "latest" to get the latest)
-DEFAULT_GECKODRIVER_VERSION = "v0.27.0"
-DEFAULT_EDGEDRIVER_VERSION = "85.0.564.44"  # (Looks for LATEST_STABLE first)
+DEFAULT_CHROMEDRIVER_VERSION = "86.0.4240.22"  # (Specify "latest" to get the latest)
+DEFAULT_GECKODRIVER_VERSION = "v0.28.0"
+DEFAULT_EDGEDRIVER_VERSION = "86.0.622.63"  # (Looks for LATEST_STABLE first)
 DEFAULT_OPERADRIVER_VERSION = "v.84.0.4147.89"
 
 
