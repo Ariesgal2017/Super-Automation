@@ -1,4 +1,4 @@
-""" SeleniumBase Exceptions
+""" My own Exceptions
     NoSuchFileException => Used by self.assert_downloaded_file(...)
     TimeLimitExceededException => Used by "--time-limit=SECONDS"
 """
