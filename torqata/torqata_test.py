@@ -76,9 +76,9 @@ class Torqata_Test_Class(BaseCase):
         # User Click the  Sign In button
         self.is_text_visible("Sign In", "//span[contains(text(),'Sign In')]")
         self.click("//span[contains(text(),'Sign In')]")
-        Invalid_credentials = self.get_text("//div[contains(text(),'Login Error: Invalid credentials.')]")
-        assert "Login Error: Invalid credentials.", Invalid_credentials
-        print(Invalid_credentials)
+        invalid_credentials = self.get_text("//div[contains(text(),'Login Error: Invalid credentials.')]")
+        assert "Login Error: Invalid credentials.", invalid_credentials
+        print(invalid_credentials)
         print("\nEnd To End Test ---Test Id 00003 passed")
 
     # End To End Test ---Test Id 00004
