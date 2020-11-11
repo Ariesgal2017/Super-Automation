@@ -1,6 +1,6 @@
 # -\*- coding: utf-8 -\*-
 
-''' This is mainly for string obfuscation. '''
+""" This is mainly for string obfuscation. """
 
 import base64
 import codecs
@@ -37,7 +37,7 @@ def is_obfuscated(string):
 def shuffle_string(string):
     if len(string) < 2:
         return string
-    return (string[1::2] + string[::2])
+    return string[1::2] + string[::2]
 
 
 def reverse_shuffle_string(string):
@@ -80,7 +80,7 @@ def ord_string_sum(string):
     try:
         for c in string:
             count += ord(c)
-    except Exception:
+    except print('ord_string_sum exception') :
         string = string.decode('utf-8')
         for c in string:
             count += ord(c)
