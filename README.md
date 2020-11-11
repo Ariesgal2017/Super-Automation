@@ -635,6 +635,7 @@ The ``--report`` option gives you a fancy report after your test suite completes
 nosetests test_suite.py --report
 ```
 <h4><b>Allure Reports:</b></h4>
+
 ```bash
 pytest test_suite.py --alluredir=allure_results
 ```
