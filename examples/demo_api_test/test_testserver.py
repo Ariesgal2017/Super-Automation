@@ -6,7 +6,7 @@ import time
 
 import pytest
 import requests
-from examples.demo_api_test.testserver import Server
+from examples.demo_api_test.testserver.server import Server
 
 
 class TestTestServer:
