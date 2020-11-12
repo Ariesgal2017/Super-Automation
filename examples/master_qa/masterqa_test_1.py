@@ -1,7 +1,7 @@
-from automation import MasterQA
+from automation import manual_qa
 
 
-class MasterQATests(MasterQA):
+class MasterQATests(manual_qa):
 
     def test_xkcd(self):
         self.open("https://xkcd.com/1512/")
