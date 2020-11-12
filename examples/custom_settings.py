@@ -1,5 +1,5 @@
 """
-To override default settings stored in seleniumbase/config/settings.py,
+To override default settings stored in automation/config/settings.py,
 change the values here and add "--settings=custom_settings.py" when running.
 """
 

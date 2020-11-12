@@ -1,4 +1,4 @@
-""" My own Exceptions
+""" Super Automation Exceptions
     NoSuchFileException => Used by self.assert_downloaded_file(...)
     TimeLimitExceededException => Used by "--time-limit=SECONDS"
 """

@@ -8,7 +8,7 @@ import warnings
 from functools import wraps
 
 
-def retry_over_exception(retry=5, delay=0.90, backoff=2, max_delay=20):
+def retry_on_exception(tries=6, delay=1, backoff=2, max_delay=32):
     """
     Decorator for implementing exponential backoff for retrying on failures.
 
@@ -17,8 +17,8 @@ def retry_over_exception(retry=5, delay=0.90, backoff=2, max_delay=20):
     backoff: Multiplier to extend the initial delay by for each retry.
     max_delay: Max time in seconds to wait between retries.
     """
-    retry = math.floor(retry)
-    if retry < 1:
+    tries = math.floor(tries)
+    if tries < 1:
         raise ValueError('"tries" must be greater than or equal to 1.')
     if delay < 0:
         raise ValueError('"delay" must be greater than or equal to 0.')
@@ -30,7 +30,7 @@ def retry_over_exception(retry=5, delay=0.90, backoff=2, max_delay=20):
     def decorated_function_with_retry(func):
         @wraps(func)
         def function_to_retry(*args, **kwargs):
-            local_tries, local_delay = retry, delay
+            local_tries, local_delay = tries, delay
             while local_tries > 1:
                 try:
                     return func(*args, **kwargs)

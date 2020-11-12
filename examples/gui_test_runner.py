@@ -1,8 +1,8 @@
-'''
+"""
 GUI TEST RUNNER
 Run by Typing: "python gui_test_runner.py"
 (Use Python 3 - There are GUI issues when using Python 2)
-'''
+"""
 
 import os
 import sys
