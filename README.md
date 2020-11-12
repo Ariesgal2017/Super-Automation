@@ -542,7 +542,9 @@ You can interchange ``pytest`` with ``nosetests`` for most tests, but using ``py
 ```bash
 pytest my_first_test.py --browser=chrome
 
-nosetests test_suite.py --browser=firefox
+nosetests  test_suite.py --browser=firefox
+
+pytest my_first_test.py --headless
 ```
 
 Here are some useful command-line options that come with ``pytest``:
