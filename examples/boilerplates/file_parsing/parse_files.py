@@ -1,7 +1,7 @@
-'''
+"""
 Demonstration of parsing data from files.
 In this example, login information is pulled for tests.
-'''
+"""
 
 from automation import BaseCase
 

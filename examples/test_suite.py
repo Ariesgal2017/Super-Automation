@@ -1,4 +1,4 @@
-''' This test suite contains 2 passing tests and 2 failing tests. '''
+""" This test suite contains 2 passing tests and 2 failing tests. """
 
 import pytest
 from automation import BaseCase
