@@ -22,7 +22,7 @@ class Torqata_Test_Class(BaseCase):
         self.clear("//input[@name='username']")
         self.input("//input[@name='username']", '!@#$%^&*()_+-')
         self.clear("//input[@name='username']")
-        self.input("//input[@name='username']", '!@#$%^&*()_+-')
+        self.input("//input[@name='username']", 'invalid@torqata.com')
         print("\nUNIT TEST 00001----Test id 00001 passed")
 
     # INTEGRATION TEST 00002----Test id 00002
@@ -44,7 +44,7 @@ class Torqata_Test_Class(BaseCase):
         self.clear("//input[@name='username']")
         self.input("//input[@name='username']", '!@#$%^&*()_+-')
         self.clear("//input[@name='username']")
-        self.input("//input[@name='username']", '!@#$%^&*()_+-')
+        self.input("//input[@name='username']", 'invalid@torqata.com')
         # User Press on PASSWORD box and enter any password
         self.click("//input[@name='password']")
         self.input("//input[@name='password']", 'ASDFGHJKLZXCVBNMQWERTYUIO')
@@ -55,7 +55,7 @@ class Torqata_Test_Class(BaseCase):
         self.clear("//input[@name='password']")
         self.input("//input[@name='password']", '!@#$%^&*()_+-')
         self.clear("//input[@name='password']")
-        self.input("//input[@name='password']", '!@#$%^&*()_+-')
+        self.input("//input[@name='password']", 'invalid')
         print("\nINTEGRATION TEST 00002----Test id 00002 passed")
 
     # End To End Test ---Test Id 00003
