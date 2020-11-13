@@ -30,11 +30,23 @@ def main():
         if num_args < 3 or num_args > 3:
             raise Exception('\n\n* INVALID RUN COMMAND! *  Usage:\n'
                             '"automation convert %s"\n' % expected_arg)
-    elif sys.argv[0].split('/')[-1] == "sbase" or (
-            sys.argv[0].split('\\')[-1] == "sbase"):
+    elif sys.argv[0].split('/')[-1] == "sdet" or (
+            sys.argv[0].split('\\')[-1] == "sdet"):
         if num_args < 3 or num_args > 3:
             raise Exception('\n\n* INVALID RUN COMMAND! *  Usage:\n'
-                            '"sbase convert %s"\n' % expected_arg)
+                            '"sdet convert %s"\n' % expected_arg)
+
+    elif sys.argv[0].split('/')[-1] == "zahed" or (
+            sys.argv[0].split('\\')[-1] == "zahed"):
+        if num_args < 3 or num_args > 3:
+            raise Exception('\n\n* INVALID RUN COMMAND! *  Usage:\n'
+                            '"zahed convert %s"\n' % expected_arg)  
+    elif sys.argv[0].split('/')[-1] == "qa" or (
+            sys.argv[0].split('\\')[-1] == "qa"):
+        if num_args < 3 or num_args > 3:
+            raise Exception('\n\n* INVALID RUN COMMAND! *  Usage:\n'
+                            '"qa convert %s"\n' % expected_arg)  
+
     else:
         if num_args < 2 or num_args > 2:
             raise Exception('\n\n* INVALID RUN COMMAND! *  Usage:\n'
