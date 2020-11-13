@@ -40,7 +40,7 @@ class ChromeTestClass(BaseCase):
         print(message)
         if major_chromedriver_version < major_chrome_version:
             install_sb = (
-                "seleniumbase install chromedriver %s" % major_chrome_version)
+                "zahed install chromedriver %s" % major_chrome_version)
             pr_install_sb = c1 + install_sb + cr
             up_msg = "You may want to upgrade your version of chromedriver:"
             up_msg = c4 + up_msg + cr
