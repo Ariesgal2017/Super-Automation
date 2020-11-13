@@ -46,9 +46,9 @@ def main():
     if sys.argv[0].split('/')[-1] == "automation" or (
             sys.argv[0].split('\\')[-1] == "automation") or (
             sys.argv[0].split('/')[-1] == "sdet") or (
-            sys.argv[0].split('\\')[-1] == "sdet") or
+            sys.argv[0].split('\\')[-1] == "sdet") or (
             sys.argv[0].split('/')[-1] == "zahed") or (
-            sys.argv[0].split('\\')[-1] == "zahed") or 
+            sys.argv[0].split('\\')[-1] == "zahed") or (
             sys.argv[0].split('/')[-1] == "qa") or (
             sys.argv[0].split('\\')[-1] == "qa"):
         if num_args < 3:
