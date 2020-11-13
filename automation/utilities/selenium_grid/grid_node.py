@@ -55,8 +55,12 @@ def main():
     num_args = len(sys.argv)
     if sys.argv[0].split('/')[-1] == "automation" or (
             sys.argv[0].split('\\')[-1] == "automation") or (
-            sys.argv[0].split('/')[-1] == "") or (
-            sys.argv[0].split('\\')[-1] == "sbase"):
+            sys.argv[0].split('/')[-1] == "sdet") or (
+            sys.argv[0].split('\\')[-1] == "sdet") or
+            sys.argv[0].split('/')[-1] == "zahed") or (
+            sys.argv[0].split('\\')[-1] == "zahed") or 
+            sys.argv[0].split('/')[-1] == "qa") or (
+            sys.argv[0].split('\\')[-1] == "qa"):
         if num_args < 3:
             invalid_run_command()
     else:
