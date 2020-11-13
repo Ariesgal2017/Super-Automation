@@ -25,7 +25,7 @@ def is_chromedriver_on_path():
 
 
 def invalid_run_command():
-    exp = ("  ** grid-node **\n\n")
+    exp = "  ** grid-node **\n\n"
     exp += "  Usage:\n"
     exp += "        automation grid-node {start|stop|restart} [OPTIONS]\n"
     exp += "  Options:\n"
@@ -55,7 +55,7 @@ def main():
     num_args = len(sys.argv)
     if sys.argv[0].split('/')[-1] == "automation" or (
             sys.argv[0].split('\\')[-1] == "automation") or (
-            sys.argv[0].split('/')[-1] == "sbase") or (
+            sys.argv[0].split('/')[-1] == "") or (
             sys.argv[0].split('\\')[-1] == "sbase"):
         if num_args < 3:
             invalid_run_command()
