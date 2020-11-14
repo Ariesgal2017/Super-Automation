@@ -625,6 +625,10 @@ pytest mytest.py --html=report.html
 ```
  can also use ``--junit-xml=report.xml`` to get an xml report instead. Jenkins can use this file to display better reporting for your tests.
 
+For log use ```bash 
+pytest test_suite.py -q --report-log=log.json
+`` 
+
 ```bash
 pytest test_suite.py --junit-xml=report.xml
 ```
