@@ -36,6 +36,7 @@ pytest-rerunfailures==8.0;python_version<"3.5"
 pytest-rerunfailures==9.1.1;python_version>="3.5"
 pytest-xdist==1.34.0;python_version<"3.5"
 pytest-xdist==2.1.0;python_version>="3.5"
+pytest-reportlog==0.1.1
 parameterized==0.7.4
 soupsieve==1.9.6;python_version<"3.5"
 soupsieve==2.0.1;python_version>="3.5"
@@ -76,9 +77,3 @@ tornado==6.1;python_version>="3.5"
 allure-pytest==2.8.19
 pdfminer.six==20191110;python_version<"3.5"
 pdfminer.six==20201018;python_version>="3.5"
-pytest-bdd>=4.0.1
-allure-pytest-bdd>=2.8.19
-glob2
-Mako
-parse
-parse_type

@@ -88,6 +88,7 @@ setup(
         'pytest==6.1.2;python_version>="3.5"',
         'pytest-cov==2.10.1',
         'pytest-forked==1.3.0',
+        'pytest-reportlog==0.1.1',
         'pytest-html==1.22.1;python_version<"3.6"',
         'pytest-html==2.0.1;python_version>="3.6"',
         'pytest-metadata==1.8.0;python_version<"3.6"',
@@ -137,12 +138,6 @@ setup(
         'allure-pytest==2.8.19',
         'pdfminer.six==20191110;python_version<"3.5"',
         'pdfminer.six==20201018;python_version>="3.5"',
-        'pytest-bdd>=4.0.1;python_version>="3.5"',
-        'glob2',
-        'Mako',
-        'parse',
-        'parse_type',
-        'six>=1.9.0',
     ],
     packages=[
         'automation',
@@ -169,7 +164,6 @@ setup(
             'sdet = automation.console_scripts.run:main',  # Simplified name
             'zahed = automation.console_scripts.run:main',  # Simplified name
             'qa = automation.console_scripts.run:main',  # Simplified name
-            'pytest-bdd = pytest_bdd.scripts:main',
         ],
         'nose.plugins': [
             'base_plugin = automation.plugins.base_plugin:Base',
@@ -181,7 +175,6 @@ setup(
             's3_logging = automation.plugins.s3_logging_plugin:S3Logging',
         ],
         'pytest11': ['automation = automation.plugins.pytest_plugin',
-                     'pytest-bdd = pytest_bdd.plugin',
                      ],
 
 
