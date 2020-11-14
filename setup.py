@@ -138,6 +138,7 @@ setup(
         'allure-pytest==2.8.19',
         'pdfminer.six==20191110;python_version<"3.5"',
         'pdfminer.six==20201018;python_version>="3.5"',
+        'behave==1.2.6',
     ],
     packages=[
         'automation',
