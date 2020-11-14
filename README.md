@@ -642,7 +642,7 @@ nosetests test_suite.py --report
 ```bash
 pytest test_suite.py --alluredir=allure_results
 ```
-For log use 
+<h4><b>For log use :</b></h4>
 ```bash 
 pytest test_suite.py -q --report-log=log.json
 or
