@@ -57,8 +57,8 @@ setup(
         "Topic :: Software Development :: Testing :: Acceptance",
         "Topic :: Software Development :: Testing :: End to End",
         "Topic :: Utilities",
-    ],
-    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
+    ]
+    + [("Programming Language :: Python :: %s" % x) for x in "2.7 3.5 3.6 3.7 3.8".split()],
     install_requires=[
         'pip>=20.2.4',
         'packaging>=20.4',
@@ -68,7 +68,6 @@ setup(
         'wheel>=0.35.1',
         'attrs>=20.3.0',
         'certifi>=2020.11.8',
-        'six',
         'nose',
         'ipdb',
         'parso==0.7.1',  # The last version for Python 2 and 3.5
@@ -138,6 +137,12 @@ setup(
         'allure-pytest==2.8.19',
         'pdfminer.six==20191110;python_version<"3.5"',
         'pdfminer.six==20201018;python_version>="3.5"',
+        'pytest-bdd>=4.0.1;python_version>="3.5"',
+        'glob2',
+        'Mako',
+        'parse',
+        'parse_type',
+        'six>=1.9.0',
     ],
     packages=[
         'automation',
@@ -163,6 +168,8 @@ setup(
             'automation = automation.console_scripts.run:main',
             'sdet = automation.console_scripts.run:main',  # Simplified name
             'zahed = automation.console_scripts.run:main',  # Simplified name
+            'qa = automation.console_scripts.run:main',  # Simplified name
+            'pytest-bdd = pytest_bdd.scripts:main',
         ],
         'nose.plugins': [
             'base_plugin = automation.plugins.base_plugin:Base',
@@ -170,11 +177,15 @@ setup(
             'page_source = automation.plugins.page_source:PageSource',
             'screen_shots = automation.plugins.screen_shots:ScreenShots',
             'test_info = automation.plugins.basic_test_info:BasicTestInfo',
-            ('db_reporting = '
-             'automation.plugins.db_reporting_plugin:DBReporting'),
+            'db_reporting =automation.plugins.db_reporting_plugin:DBReporting',
             's3_logging = automation.plugins.s3_logging_plugin:S3Logging',
         ],
-        'pytest11': ['automation = automation.plugins.pytest_plugin']
+        'pytest11': ['automation = automation.plugins.pytest_plugin',
+                     'pytest-bdd = pytest_bdd.plugin',
+                     ],
+
+
+
     }
 )
 
