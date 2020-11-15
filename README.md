@@ -540,11 +540,11 @@ self._print(TEXT)  # Calls Python's print() / Allows for translations
 You can interchange ``pytest`` with ``nosetests`` for most tests, but using ``pytest`` is recommended. (``chrome`` is the default browser if not specified.)
 
 ```bash
-pytest my_first_test.py --browser=chrome
+pytest basic_test.py --browser=chrome
 
-nosetests  test_suite.py --browser=firefox
+nosetests  basic_test.py --browser=firefox
 
-pytest my_first_test.py --headless
+pytest basic_test.py --headless
 ```
 
 Here are some useful command-line options that come with ``pytest``:
@@ -621,13 +621,13 @@ Super-Automation provides additional ``pytest`` command-line options for tests:
 Using ``--html=report.html`` gives you a fancy report of the name specified after your test suite completes.
 
 ```bash
-pytest mytest.py --html=report.html
+pytest basic_test.py --html=report.html
 ```
  can also use ``--junit-xml=report.xml`` to get an xml report instead. Jenkins can use this file to display better reporting for your tests.
 
 
 ```bash
-pytest test_suite.py --junit-xml=report.xml
+pytest basic_test.py --junit-xml=report.xml
 ```
 
 <h4><b>Nosetest Reports:</b></h4>
@@ -635,17 +635,17 @@ pytest test_suite.py --junit-xml=report.xml
 The ``--report`` option gives you a fancy report after your test suite completes.
 
 ```bash
-nosetests test_suite.py --report
+nosetests basic_test.py --report
 ```
 <h4><b>Allure Reports:</b></h4>
 
 ```bash
-pytest test_suite.py --alluredir=allure_results
+pytest basic_test.py --alluredir=allure_results
 ```
 <h4><b>For log use :</b></h4>
 
 ```bash 
-pytest test_suite.py -q --report-log=log.json
+pytest basic_test.py -q --report-log=log.json
 or
-pytest test_suite.py -q --report-log=FILE
+pytest basic_test.py -q --report-log=FILE
 ```
