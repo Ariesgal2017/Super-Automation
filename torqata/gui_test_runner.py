@@ -20,30 +20,30 @@ class App:
         self.label = Label(root, width=40).pack()
         self.title = Label(frame, text="", fg="black").pack()
         self.title1 = Label(
-            frame, text=("Run a Test in Chrome:"), fg="blue").pack()
+            frame, text="Run a Test in Chrome:", fg="blue").pack()
         self.run1 = Button(
             frame, command=self.run_1,
-            text=("pytest torqata_test.py --browser=chrome"),
+            text="pytest torqata_test.py --browser=chrome",
             fg="green").pack()
         self.title2 = Label(
-            frame, text=("Run a Test in Firefox:"), fg="blue").pack()
+            frame, text="Run a Test in Firefox:", fg="blue").pack()
         self.run2 = Button(
             frame, command=self.run_2,
-            text=("pytest torqata_test.py --browser=firefox"),
+            text="pytest torqata_test.py --browser=firefox",
             fg="green").pack()
         self.title3 = Label(
             frame, text="Run a Test with Demo Mode:", fg="blue").pack()
         self.run3 = Button(
             frame, command=self.run_3,
-            text=("pytest torqata_test.py --browser=chrome --demo_mode"),
+            text="pytest torqata_test.py --browser=chrome --demo_mode",
             fg="green").pack()
         self.title6 = Label(
             frame,
-            text="Run a Failing Test Suite with a Test Report:",
+            text="Run a Test Suite with a Test Report:",
             fg="blue").pack()
-        self.run6 = Button(
+        self.run4 = Button(
             frame, command=self.run_4,
-            text=("pytest torqata_test.py --browser=chrome --html=report.html"),
+            text="pytest torqata_test.py --browser=chrome --html=report.html",
             fg="red").pack()
         self.end_title = Label(frame, text="", fg="black").pack()
         self.quit = Button(frame, text="QUIT", command=frame.quit).pack()
