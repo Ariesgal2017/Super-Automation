@@ -642,6 +642,147 @@ Super-Automation provides additional ``pytest`` command-line options for tests:
 --timeout-multiplier=MULTIPLIER  # (Multiplies the default timeout values.)
 ```
 
+You can customize test runs from the command-line interface enabling the browser type, headless mode, mobile mode, multithreading mode, demo mode, proxy config, user agent config, browser extensions, and more.
+
+Here are some examples of configuring tests, which can be run
+
+```bash
+# Run a test in Chrome (default browser)
+pytest my_first_test.py
+
+# Run a test in Firefox
+pytest test_swag_labs.py --browser=firefox
+
+# Run a test in Demo Mode (highlight assertions)
+pytest test_demo_site.py --demo
+
+# Run a test in Headless Mode (invisible browser)
+pytest test_demo_site.py --headless
+
+# Run tests multi-threaded using [n] threads
+pytest test_suite.py -n=4
+
+# Create a pytest html report after tests are done
+pytest test_suite.py --html=report.html
+
+# Enter Debug Mode on failures
+pytest test_fail.py --pdb
+
+# Rerun failing tests more times
+pytest test_suite.py --reruns=1
+
+# Pass extra data into tests (retrieve by calling self.data)
+pytest my_first_test.py --data="ABC,DEF"
+
+# Run tests on a local Selenium Grid
+pytest test_suite.py --server="127.0.0.1"
+
+# Run tests on a remote Selenium Grid
+pytest test_suite.py --server=IP_ADDRESS --port=4444
+
+# Run tests on a remote Selenium Grid with authentication
+pytest test_suite.py --server=USERNAME:KEY@IP_ADDRESS --port=80
+
+# Reuse the same browser session for all tests being run
+pytest test_suite.py --reuse-session
+
+# Reuse the same browser session, but empty cookies between tests
+pytest test_suite.py --reuse-session --crumbs
+
+# Run tests through a proxy server
+pytest proxy_test.py --proxy=IP_ADDRESS:PORT
+
+# Run tests through a proxy server with authentication
+pytest proxy_test.py --proxy=USERNAME:PASSWORD@IP_ADDRESS:PORT
+
+# Run tests while setting the web browser's User Agent
+pytest user_agent_test.py --agent="USER-AGENT-STRING"
+
+# Run tests using Chrome's mobile device emulator (default settings)
+pytest test_swag_labs.py --mobile
+
+# Run mobile tests specifying CSS Width, CSS Height, and Pixel-Ratio
+pytest test_swag_labs.py --mobile --metrics="411,731,3"
+
+# Run tests while changing Super-Automation default settings
+pytest my_first_test.py --settings-file=custom_settings.py
+```
+
+You can interchange ``pytest`` with ``nosetests`` for most tests, but using ``pytest`` is recommended. (``chrome`` is the default browser if not specified.)
+
+If you're using ``pytest`` for running tests out-side of the Super-Automation repo, you'll want a copy of pytest.ini at the base of the new folder structure. If using ``nosetests``, the same applies for setup.cfg
+
+
+Here's how to connect to a Sauce Labs Selenium Grid server for running tests:
+
+```bash
+pytest my_first_test.py --server=USERNAME:KEY@ondemand.saucelabs.com --port=80
+```
+
+Here's how to connect to a TestingBot Selenium Grid server for running tests:
+
+```bash
+pytest my_first_test.py --server=USERNAME:KEY@hub.testingbot.com --port=80
+```
+
+Here's how to connect to a CrossBrowserTesting Selenium Grid server for running tests:
+
+```bash
+pytest my_first_test.py --server=USERNAME:KEY@hub.crossbrowsertesting.com --port=80
+```
+
+Here's how to connect to a LambdaTest Selenium Grid server for running tests:
+
+```bash
+pytest my_first_test.py --server=USERNAME:KEY@hub.lambdatest.com --port=80
+```
+
+If any test is moving too fast for your eyes to see what's going on, you can run it in **Demo Mode** by adding ``--demo`` on the command line, which pauses the browser briefly between actions, highlights page elements being acted on, and lets you know what test assertions are happening in real time:
+
+```bash
+pytest my_first_test.py --demo
+```
+
+To run Pytest multithreaded on multiple CPUs at the same time, add ``-n=NUM`` or ``-n NUM`` on the command line, where NUM is the number of CPUs you want to use.
+
+### Retrying failing tests automatically:
+
+You can use ``--reruns=NUM`` to retry failing tests that many times. Use ``--reruns-delay=SECONDS`` to wait that many seconds between retries. Example:
+
+```
+pytest --reruns=2 --reruns-delay=1
+```
+
+You can use the following calls in your scripts to help you debug issues:
+
+```python
+import time; time.sleep(5)  # Makes the test wait and do nothing for 5 seconds.
+import ipdb; ipdb.set_trace()  # Enter debugging mode. n = next, c = continue, s = step.
+import pytest; pytest.set_trace()  # Enter debugging mode. n = next, c = continue, s = step.
+```
+
+To pause an active test that throws an exception or error, add ``--pdb -s``:
+
+```bash
+pytest my_first_test.py --pdb -s
+```
+
+
+### Mobile Device Testing:
+
+Use ``--mobile`` to quickly run your tests using Chrome's mobile device emulator with default values for device metrics (CSS Width, CSS Height, Pixel-Ratio) and a default value set for the user agent. To configure the mobile device metrics, use ``--metrics="CSS_Width,CSS_Height,Pixel_Ratio"`` to set those values. You'll also be able to set the user agent with ``--agent="USER-AGENT-STRING"`` (a default user agent will be used if not specified).
+```bash
+# Run tests using Chrome's mobile device emulator (default settings)
+pytest test_swag_labs.py --mobile
+
+# Run mobile tests specifying CSS Width, CSS Height, and Pixel-Ratio
+pytest test_swag_labs.py --mobile --metrics="411,731,3"
+
+# Run mobile tests specifying the user agent
+pytest test_swag_labs.py --mobile --agent="Mozilla/5.0 (Linux; Android 9; Pixel 3 XL)"
+```
+
+
 <h4><b>Pytest Reports:</b></h4>
 
 Using ``--html=report.html`` gives you a fancy report of the name specified after your test suite completes.
