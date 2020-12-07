@@ -747,6 +747,10 @@ pytest my_first_test.py --demo
 ```
 
 To run Pytest multithreaded on multiple CPUs at the same time, add ``-n=NUM`` or ``-n NUM`` on the command line, where NUM is the number of CPUs you want to use.
+```bash
+pytest my_first_test.py -n 3
+```
+
 
 ### Retrying failing tests automatically:
 
