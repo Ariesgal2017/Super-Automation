@@ -558,19 +558,23 @@ self.get_regexp_matches('the string','xxx')
 self.replace_string('Hello_world!','In_god_we_trust')
 ```
 
-
-
-
-
-
 You can interchange ``pytest`` with ``nosetests`` for most tests, but using ``pytest`` is recommended. (``chrome`` is the default browser if not specified.)
 
 ```bash
 pytest basic_test.py --browser=chrome
+pytest basic_test.py --browser=firefox
+pytest basic_test.py --browser=edge
+pytest basic_test.py --browser=opera
+pytest basic_test.py --browser=ie
 
-nosetests  basic_test.py --browser=firefox
+nosetests basic_test.py --browser=chrome
+nosetests basic_test.py --browser=firefox
+nosetests basic_test.py --browser=edge
+nosetests basic_test.py --browser=opera
+nosetests basic_test.py --browser=ie
 
 pytest basic_test.py --headless
+nosetests basic_test.py --headless
 ```
 
 Here are some useful command-line options that come with ``pytest``:
@@ -589,6 +593,7 @@ Here are some useful command-line options that come with ``pytest``:
 ```
 
 Super-Automation provides additional ``pytest`` command-line options for tests:
+You can customize test runs from the command-line interface enabling the browser type, headless mode, mobile mode, multithreading mode, demo mode, proxy config, user agent config, browser extensions, and more.
 
 ```bash
 --browser=BROWSER  # (The web browser to use. Default: "chrome".)
@@ -642,67 +647,65 @@ Super-Automation provides additional ``pytest`` command-line options for tests:
 --timeout-multiplier=MULTIPLIER  # (Multiplies the default timeout values.)
 ```
 
-You can customize test runs from the command-line interface enabling the browser type, headless mode, mobile mode, multithreading mode, demo mode, proxy config, user agent config, browser extensions, and more.
-
-Here are some examples of configuring tests, which can be run
+Here are some examples of configuring tests and there use in test
 
 ```bash
 # Run a test in Chrome (default browser)
 pytest my_first_test.py
 
 # Run a test in Firefox
-pytest test_swag_labs.py --browser=firefox
+pytest my_first_test.py --browser=firefox
 
 # Run a test in Demo Mode (highlight assertions)
-pytest test_demo_site.py --demo
+pytest my_first_test.py --demo
 
 # Run a test in Headless Mode (invisible browser)
-pytest test_demo_site.py --headless
+pytest my_first_test.py --headless
 
 # Run tests multi-threaded using [n] threads
-pytest test_suite.py -n=4
+pytest my_first_test.py -n=4
 
 # Create a pytest html report after tests are done
-pytest test_suite.py --html=report.html
+pytest my_first_test.py --html=report.html
 
 # Enter Debug Mode on failures
-pytest test_fail.py --pdb
+pytest my_first_test.py --pdb
 
 # Rerun failing tests more times
-pytest test_suite.py --reruns=1
+pytest my_first_test.py --reruns=1
 
 # Pass extra data into tests (retrieve by calling self.data)
 pytest my_first_test.py --data="ABC,DEF"
 
 # Run tests on a local Selenium Grid
-pytest test_suite.py --server="127.0.0.1"
+pytest my_first_test.py --server="127.0.0.1"
 
 # Run tests on a remote Selenium Grid
-pytest test_suite.py --server=IP_ADDRESS --port=4444
+pytest my_first_test.py --server=IP_ADDRESS --port=4444
 
 # Run tests on a remote Selenium Grid with authentication
-pytest test_suite.py --server=USERNAME:KEY@IP_ADDRESS --port=80
+pytest my_first_test.py --server=USERNAME:KEY@IP_ADDRESS --port=80
 
 # Reuse the same browser session for all tests being run
-pytest test_suite.py --reuse-session
+pytest my_first_test.py --reuse-session
 
 # Reuse the same browser session, but empty cookies between tests
-pytest test_suite.py --reuse-session --crumbs
+pytest my_first_test.py --reuse-session --crumbs
 
 # Run tests through a proxy server
-pytest proxy_test.py --proxy=IP_ADDRESS:PORT
+pytest my_first_test.py --proxy=IP_ADDRESS:PORT
 
 # Run tests through a proxy server with authentication
-pytest proxy_test.py --proxy=USERNAME:PASSWORD@IP_ADDRESS:PORT
+pytest my_first_test.py --proxy=USERNAME:PASSWORD@IP_ADDRESS:PORT
 
 # Run tests while setting the web browser's User Agent
-pytest user_agent_test.py --agent="USER-AGENT-STRING"
+pytest my_first_test.py --agent="USER-AGENT-STRING"
 
 # Run tests using Chrome's mobile device emulator (default settings)
-pytest test_swag_labs.py --mobile
+pytest my_first_test.py --mobile
 
 # Run mobile tests specifying CSS Width, CSS Height, and Pixel-Ratio
-pytest test_swag_labs.py --mobile --metrics="411,731,3"
+pytest my_first_test.py --mobile --metrics="411,731,3"
 
 # Run tests while changing Super-Automation default settings
 pytest my_first_test.py --settings-file=custom_settings.py
