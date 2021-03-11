@@ -58,7 +58,7 @@ zahed install edge latest
 zahed install opera latest
 zahed install ie latest
 ```
-# Selenium raper keywords
+# Selenium wraper keywords
 
 ```python
 self.open(url)
