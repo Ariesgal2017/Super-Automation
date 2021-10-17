@@ -3,7 +3,7 @@ browser.runtime.onInstalled.addListener(function(details) {
 
     if (details.reason === 'install') {
         browser.tabs.create({
-            url: 'https://www.katalon.com/sign-up/?utm_source=browser%20store&utm_campaign=installed%20KR'
+            url: ''
         });
         segment().then(service => service.trackingInstallApp());
         browser.storage.local.set({ firstTime: true})
